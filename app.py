@@ -8,9 +8,9 @@ from flask import Flask, jsonify
 app = Flask(__name__)
 
 LOCAL_BASE_PATH = getenv('BASE_PATH')
-REMOTE_TRAINED_PATH = getenv('REMOTE_TRAINED_PATH','processed_data/trained_model.parquet')
-REMOTE_MODEL_PATH = getenv('REMOTE_TRAINED_PATH','trained_model/model_risk.joblib')
-BUCKET_STORAGE = getenv('REMOTE_TRAINED_PATH','kueski-test-storage')
+REMOTE_TRAINED_PATH = getenv('REMOTE_TRAINED_PATH')
+REMOTE_MODEL_PATH = getenv('REMOTE_MODEL_PATH')
+BUCKET_STORAGE = getenv('BUCKET_STORAGE')
 LOCAL_PATH_FEATURES = path.join(LOCAL_BASE_PATH,
                        'trained_model.parquet')
 LOCAL_PATH_MODEL = path.join(LOCAL_BASE_PATH,
